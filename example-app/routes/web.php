@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/base', function () {
-    return view('base');
-});
+Route::get('/base', App\Http\Controllers\Base::class.'@index');
+
+Route::get('/ajax/{id}', App\Http\Controllers\Ajax::class.'@index');
+
+Route::post('/result', App\Http\Controllers\Base::class.'@store');
