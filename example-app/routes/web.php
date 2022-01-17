@@ -22,3 +22,5 @@ Route::get('/base', App\Http\Controllers\Base::class.'@index');
 Route::get('/ajax/{id}', App\Http\Controllers\Ajax::class.'@index');
 
 Route::post('/result', App\Http\Controllers\Base::class.'@store');
+
+Route::get('/jquery', App\Http\Controllers\Base::class.'@jquery');
